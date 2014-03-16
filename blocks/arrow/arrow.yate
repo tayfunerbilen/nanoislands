@@ -1,7 +1,8 @@
+
 func nb-arrow(nodeset arrow) {
     default = {
         'search': 'true'
-        'buttonContent': 'Найти'
+        'buttonContent': 'Find'
     }
 
     nb-block('arrow', nb-extend(default, arrow))

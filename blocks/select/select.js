@@ -210,8 +210,8 @@ nb.define('select', {
         });
     },
 
-    /*!
-     * Save value and text from <select> node.
+    /**
+     * Save value and text from select node.
      * @private
      */
     _updateFromSelect: function() {
@@ -224,6 +224,11 @@ nb.define('select', {
 
         this._setText(this.text);
     },
+
+    /**
+    * Save value and text from select node.
+    * @private
+    */
 
     _onclick: function(evt) {
         if (this.$node && this.$node.data('uiAutocomplete')) {
