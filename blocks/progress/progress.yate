@@ -14,16 +14,22 @@ func nb-progress(nodeset options) {
 }
 
 match .progress nb {
-    <div data-nb='progress' class='nb-progress _init nb-progress_type_{ .type }' data-nb-type='{ .type }'>
+    <div data-nb='progress' data-nb-type='{ .type }'>
+        _size-theme-type-class({
+           'name': 'progress'
+           'type': .type
+        })
+
+        @class += " _init"
 
         apply . nb-main-attrs
 
         if .bar {
-            <div class="nb-progress__bar js-bar" style="width: { .start }%"></div>
+            <div class="nb-progress-bar js-bar" style="width: { .start }%"></div>
         }
 
         if .title {
-            <div class="nb-progress__title js-title">
+            <div class="nb-progress-title js-title">
                 if .type == 'percentage' {
                     .start + '%'
                 } else {
