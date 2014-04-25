@@ -28,7 +28,7 @@ nb.define('select', {
         oninit: function() {
             this.isOpen = false;
             this.$control = this.$node.find('select');
-            this.$dropdown = this.$node.children('.nb-select__dropdown').appendTo('body');
+            this.$dropdown = this.$node.children('.nb-select-dropdown').appendTo('body');
             this.data = this.nbdata();
 
             this._updateFromSelect();
@@ -163,15 +163,15 @@ nb.define('select', {
 
 // redefine one menu item rendering method, fires every time, then popup opening
             that.$jUI._renderItem = function(ul, item) {
-                var $itemNode = $('<li class="nb-select__item"></li>');
+                var $itemNode = $('<li class="nb-select-item"></li>');
 
                 if (item.option.selected) {
-                    $itemNode.addClass('nb-select__item_selected_yes');
+                    $itemNode.addClass('is-selected');
                 }
 
                 if (item.type == 'group') {
 
-                    $itemNode.addClass('nb-select__item_type_group');
+                    $itemNode.addClass('nb-select-group-item');
                     var $innerUL = $('<ul></ul>');
 
                     item.group.each(function(index, item) {
@@ -182,15 +182,15 @@ nb.define('select', {
                 }
 
                 if (item.separator) {
-                    $itemNode.addClass('nb-select__item_seperator');
+                    $itemNode.addClass('nb-select-seperator-item');
                 } else {
                     $itemNode.data('ui-autocomplete-item', item);
 
-                    var $itemNodeContent = $('<a class="nb-select__a"></a>');
-                    var $itemText = $('<span class="nb-select__text"></span>').text(item.label).appendTo($itemNodeContent);
+                    var $itemNodeContent = $('<a class="nb-select-a"></a>');
+                    var $itemText = $('<span class="nb-select-text"></span>').text(item.label).appendTo($itemNodeContent);
 
                     if (item.icon) {
-                        $itemText.prepend('<img src="//yandex.st/lego/_/La6qi18Z8LwgnZdsAr1qy1GwCwo.gif" class="nb-icon nb-icon_' + item.icon + '">');
+                        $itemText.prepend('<img class="nb-icon nb-' + item.icon + '-icon">');
                     }
 
                     $itemNode.append($itemNodeContent);
@@ -266,7 +266,7 @@ nb.define('select', {
         _setMaxHeight: function(maxheight) {
             var height;
             if (/^\d+$/.test(maxheight)) {
-                var item = this.$jUI.menu.element.find('.nb-select__item').first();
+                var item = this.$jUI.menu.element.find('.nb-select-item').first();
                 height = parseInt(item.height()) * maxheight;
             } else {
                 height = maxheight;

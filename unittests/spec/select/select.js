@@ -611,7 +611,7 @@ describe("Select Tests", function() {
             it("If maxHeight = 1 should be visilbe only one item", function() {
                 var select = nb.find('select-mw1');
                 select.open();
-                expect(select.$jUI.menu.element.height()).to.equal(select.$jUI.menu.element.find('.nb-select__item').first().height());
+                expect(select.$jUI.menu.element.height()).to.equal(select.$jUI.menu.element.find('.nb-select-item').first().height());
             });
 
             it("If maxHeight = 10px should be visilbe only 10px", function() {
@@ -623,7 +623,7 @@ describe("Select Tests", function() {
             it("Icon node should be presented in jUI dropdown menu item, if icon of item is specified", function() {
                 var select = nb.find('select-with-icons-in-options');
                 select.open();
-                expect(select.$jUI.menu.element.find('.nb-select__item').first().find('.nb-icon').length).to.be.equal(1);
+                expect(select.$jUI.menu.element.find('.nb-select-item').first().find('.nb-icon').length).to.be.equal(1);
             });
         });
     });
