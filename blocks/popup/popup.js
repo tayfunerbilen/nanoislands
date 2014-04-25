@@ -39,7 +39,7 @@
                     if ($.contains(that.uiDialog[0], e.target)) {
                         return;
                     }
-                    
+
                     that.close();
                 };
 
@@ -416,7 +416,7 @@
     nb.define('popup', {
 
         events: {
-            'click .nb-popup__close': 'close',
+            'click .nb-popup-close': 'close',
             'position': 'onposition'
         },
 
@@ -429,7 +429,7 @@
                 this.modal = true;
             }
 
-            this.$menu = this.$node.find('.nb-popup__menu');
+            this.$menu = this.$node.find('.nb-popup-menu');
 
             if (this.$menu.length) {
                 this.$menu.menu({
