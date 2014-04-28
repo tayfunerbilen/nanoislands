@@ -74,7 +74,7 @@ match .input nb {
 
         if .error {
            nb-popup({
-                "class": "nb-popup_type_error"
+                "class": "nb-error-popup"
                 "content": .error.content
                 "id": errorId
            })
@@ -151,7 +151,7 @@ match .textarea nb {
            @data-nb-error ='{{ "id": "{ errorId }", "direction":"{ .error.direction}" }}'
 
            nb-popup({
-                "class": "nb-popup_type_error"
+                "class": "nb-error-popup"
                 "content": .error.content
                 "id": errorId
            })
