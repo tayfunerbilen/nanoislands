@@ -16,7 +16,7 @@ func nb-dropzone(nodeset options) {
 
 
 match .dropzone nb {
-    <div class="nb-dropzone">
+    <div>
 
         _size-theme-type-class({
            'name': 'dropzone'
