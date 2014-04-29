@@ -148,7 +148,7 @@
 
         _create: function() {
             this._super();
-            this.$tail = $('<div class="nb-popup__tail"><i/></div>');
+            this.$tail = $('<div class="nb-popup-tail"><i/></div>');
 
             //TODO: проверить, что вызывается один раз
             this.$tail.prependTo(this.uiDialog);
