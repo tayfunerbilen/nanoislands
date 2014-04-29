@@ -203,18 +203,12 @@ func icons() {
     <div class="demo-section">
         <div class="demo-h3">
             'Size: S '
-            <span class="demo-code demo-code_small">
-                '.nb-iconn_size_s'
-            </span>
         </div>
         all-icons-s()
     </div>
     <div class="demo-section">
         <div class="demo-h3">
             'Size: M '
-            <span class="demo-code demo-code_small">
-                '.nb-iconn_size_m'
-            </span>
         </div>
         all-icons-m()
     </div>
