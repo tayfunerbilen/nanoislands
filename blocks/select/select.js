@@ -163,7 +163,7 @@ nb.define('select', {
 
 // redefine one menu item rendering method, fires every time, then popup opening
             that.$jUI._renderItem = function(ul, item) {
-                var $itemNode = $('<li class="nb-select-item"></li>');
+                var $itemNode = $('<li class="_nb-select-item"></li>');
 
                 if (item.option.selected) {
                     $itemNode.addClass('is-selected');
@@ -171,7 +171,7 @@ nb.define('select', {
 
                 if (item.type == 'group') {
 
-                    $itemNode.addClass('nb-select-group-item');
+                    $itemNode.addClass('_nb-select-group-item');
                     var $innerUL = $('<ul></ul>');
 
                     item.group.each(function(index, item) {
@@ -182,15 +182,15 @@ nb.define('select', {
                 }
 
                 if (item.separator) {
-                    $itemNode.addClass('nb-select-seperator-item');
+                    $itemNode.addClass('_nb-select-seperator-item');
                 } else {
                     $itemNode.data('ui-autocomplete-item', item);
 
-                    var $itemNodeContent = $('<a class="nb-select-a"></a>');
-                    var $itemText = $('<span class="nb-select-text"></span>').text(item.label).appendTo($itemNodeContent);
+                    var $itemNodeContent = $('<a class="_nb-select-a"></a>');
+                    var $itemText = $('<span class="_nb-select-text"></span>').text(item.label).appendTo($itemNodeContent);
 
                     if (item.icon) {
-                        $itemText.prepend('<img class="nb-icon nb-' + item.icon + '-icon">');
+                        $itemText.prepend('<img class="nb-icon _nb-s-' + item.icon + '-icon">');
                     }
 
                     $itemNode.append($itemNodeContent);
@@ -260,13 +260,13 @@ nb.define('select', {
         },
 
         _setText: function(text) {
-            this.$node.find('.nb-button-content').text(text);
+            this.$node.find('._nb-button-content').text(text);
         },
 
         _setMaxHeight: function(maxheight) {
             var height;
             if (/^\d+$/.test(maxheight)) {
-                var item = this.$jUI.menu.element.find('.nb-select-item').first();
+                var item = this.$jUI.menu.element.find('._nb-select-item').first();
                 height = parseInt(item.height()) * maxheight;
             } else {
                 height = maxheight;

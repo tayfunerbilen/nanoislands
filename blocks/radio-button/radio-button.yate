@@ -22,8 +22,8 @@ match .radio-button nb {
         for .group {
 
             uniq = 'nb-radio-button_{_nb-uniq()}'
-            <span class="nb-radio-button-button nb-complex-group-item">
-                <input class="nb-radio-button-radio" type="radio" name="{ ..name }" value="{ .value }" id="{ uniq }">
+            <span class="_nb-radio-button-button nb-complex-group-item">
+                <input class="_nb-radio-button-radio" type="radio" name="{ ..name }" value="{ .value }" id="{ uniq }">
                     if .checked {
                         @checked = 'checked'
                     }

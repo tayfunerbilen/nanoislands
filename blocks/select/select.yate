@@ -12,10 +12,10 @@ match .select nb {
     <span data-nb-direction ="{ .direction }" data-nb="select" tabindex="0">
         _nb-button-attributes('span')
 
-        @class += ' nb-select _init nb-select-button'
+        @class += ' nb-select _init _nb-select-button'
 
         if .size == 's' {
-            @class += ' nb-small-normal-select'
+            @class += ' _nb-small-normal-select'
         }
 
         apply . nb-main-attrs
@@ -28,7 +28,7 @@ match .select nb {
             @data-nb-maxheight = .maxHeight
         }
 
-        <span class="nb-button-content">
+        <span class="_nb-button-content">
             isSelected = count(.items[(.selected)]) > 0
 
             for .items {
@@ -37,8 +37,8 @@ match .select nb {
                 }
             }
         </span>
-        <span class="nb-select-helper"></span> // Helper for baseline alignment
-        <select class="nb-select-fallback">
+        <span class="_nb-select-helper"></span> // Helper for baseline alignment
+        <select class="_nb-select-fallback">
             if ( .disabled ) {
                 @disabled = 'disabled'
             }

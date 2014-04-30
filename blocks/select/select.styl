@@ -1,13 +1,5 @@
 .nb-select
-
-
-  &-fallback
-    if !ie
-      display: none
-    if ie
-      display: inline-block
-
-  .nb-button-content
+  ._nb-button-content
     if ie
       display: none !important
     if !ie
@@ -20,9 +12,16 @@
       float: left
       width: 100%
 
+
+._nb-select-fallback
+  if !ie
+    display: none
+  if ie
+    display: inline-block
+
 // For baseline alignment,
 // TODO: move to Stylobate
-.nb-select-helper
+._nb-select-helper
   display: inline-block
   width: 0
   overflow: hidden
@@ -30,21 +29,21 @@
   &:before
     content: " "
 
-.nb-select .nb-select-button
+.nb-select ._nb-select-button
   box-sizing: border-box
   display: inline-block
 
-.nb-select .nb-button-content:before
-.nb-select-dropdown .nb-select-group-tem > .nb-select-a > .nb-select-text:before
+.nb-select ._nb-button-content:before
+.nb-select-dropdown ._nb-select-group-tem > ._nb-select-a > ._nb-select-text:before
   content: ""
   skin: icon_dropdown selecty
 
-.nb-small-select .nb-button-content:before
-.nb-small-select-dropdown .nb-select-group-tem > .nb-select-a  > .nb-select-text:before
+._nb-small-select ._nb-button-content:before
+._nb-small-select-dropdown ._nb-select-group-tem > ._nb-select-a  > ._nb-select-text:before
   skin: icon_dropdown selecty small
 
-.nb-select-dropdown .nb-select-group-tem > .nb-select-a  > .nb-select-text:before
-.nb-small-select-dropdown .nb-select-group-tem > .nb-select-a  > .nb-select-text:before
+.nb-select-dropdown ._nb-select-group-tem > ._nb-select-a  > ._nb-select-text:before
+._nb-small-select-dropdown ._nb-select-group-tem > ._nb-select-a  > ._nb-select-text:before
   transform: scale(0.75) rotate(-45deg) translate(3px, 5px)
 
 .nb-select-dropdown .ui-menu
@@ -55,32 +54,32 @@
   reset: ul
   list-style-type: none // move to reset
 
-.nb-select-item
+._nb-select-item
   reset: li
 
-.nb-select-text
+._nb-select-text
   skin: menu-item (_checked '.is-selected &')
   white-space: nowrap
 
-.nb-select-separator
+._nb-select-separator
   skin: menu-separator padded
 
-.nb-select-popup .nb-popup-content
+._nb-select-popup ._nb-popup-content
   overflow-x: hidden
   overflow-y: auto
   padding: 0
 
-.nb-small-select-dropdowns .nb-select-item .nb-select-text
+._nb-small-select-dropdowns ._nb-select-item ._nb-select-text
   skin: menu-item_size small
 
-.nb-small-normal-select .ui-state-focus > .nb-select-text,
-.nb-small-normal-select .ui-state-focus > .nb-select-text,
-.nb-small-normal-select .ui-state-focus > .nb-select-text,
+._nb-small-normal-select .ui-state-focus > ._nb-select-text,
+._nb-small-normal-select .ui-state-focus > ._nb-select-text,
+._nb-small-normal-select .ui-state-focus > ._nb-select-text,
   skin: menu-item_hover
 
 // FIXME: we need to use `nb-is-disabled` here
-.nb-small-normal-select .ui-menu-item_disabled_yes
+._nb-small-normal-select .ui-menu-item_disabled_yes
   kind: disabled 0.6 (-nested '')
 
-.nb-select-seperator-item
+._nb-select-seperator-item
   skin: menu-separator padded

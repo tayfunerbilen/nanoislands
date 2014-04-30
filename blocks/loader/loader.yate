@@ -15,9 +15,9 @@ match .loader nb {
 
         apply . nb-main-attrs
 
-        <span class="nb-loader-spinner">
+        <span class="_nb-loader-spinner">
             if .color {
-                @class += " nb-loader-{ .color }-spinner"
+                @class += " _nb-loader-{ .color }-spinner"
             }
         </span>
     </span>

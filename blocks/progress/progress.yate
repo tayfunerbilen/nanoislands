@@ -25,11 +25,11 @@ match .progress nb {
         apply . nb-main-attrs
 
         if .bar {
-            <div class="nb-progress-bar js-bar" style="width: { .start }%"></div>
+            <div class="_nb-progress-bar js-bar" style="width: { .start }%"></div>
         }
 
         if .title {
-            <div class="nb-progress-title js-title">
+            <div class="_nb-progress-title js-title">
                 if .type == 'percentage' {
                     .start + '%'
                 } else {
