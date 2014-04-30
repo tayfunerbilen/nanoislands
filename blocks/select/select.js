@@ -407,7 +407,7 @@ nb.define('select', {
          */
         disable: function() {
             if (this.isEnabled()) {
-                this.$node.addClass('nb-is-disabled');
+                this.$node.addClass('_nb-is-disabled');
                 if (!nb.IE_LT9) {
                     this.$node.autocomplete('disable');
                 }
@@ -424,7 +424,7 @@ nb.define('select', {
          */
         enable: function() {
             if (!this.isEnabled()) {
-                this.$node.removeClass('nb-is-disabled');
+                this.$node.removeClass('_nb-is-disabled');
                 if (!nb.IE_LT9) {
                     this.$node.autocomplete('enable');
                 }
@@ -439,7 +439,7 @@ nb.define('select', {
          * @returns {Boolean}
          */
         isEnabled: function() {
-            return !this.$node.hasClass('nb-is-disabled');
+            return !this.$node.hasClass('_nb-is-disabled');
         },
 
         /*

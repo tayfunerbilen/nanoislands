@@ -3,7 +3,7 @@ func nb-header(nodeset header) {
         'arrow': {
             'search': 'true'
             'buttonContent': 'Найти'
-            'class': 'nb-header-arrow'
+            'class': '_nb-header-arrow'
         }
         'services': 'true'
         'settings': 'true'
@@ -16,12 +16,12 @@ func nb-header(nodeset header) {
 match .header nb {
     <div class="nb-header _init" data-nb="header">
         apply . nb-main-attrs
-        <div class="nb-header-actions">
+        <div class="_nb-header-actions">
 
             if .settings == 'true' {
 
-                <div class="nb-header-button">
-                    <div class="nb-header-button-icon">
+                <div class="_nb-header-button">
+                    <div class="_nb-header-button-icon">
                         nb-icon({
                             'icon': 'settings'
                             'size': 'm'
@@ -32,8 +32,8 @@ match .header nb {
 
             if .services == 'true' {
 
-                <div class="nb-header-button">
-                    <div class="nb-header-button-icon">
+                <div class="_nb-header-button">
+                    <div class="_nb-header-button-icon">
                         nb-icon({
                             'icon': 'services'
                             'size': 'm'
@@ -45,8 +45,8 @@ match .header nb {
                 nb-user(.user)
             }
         </div>
-        <div class="nb-header-main">
-            <a href="{.yaHref}" class="nb-header-logo"></a>
+        <div class="_nb-header-main">
+            <a href="{.yaHref}" class="_nb-header-logo"></a>
             nb-arrow(.arrow)
         </div>
     </div>

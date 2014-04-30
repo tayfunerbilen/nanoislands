@@ -16,7 +16,7 @@ func nb-icon(nodeset options) {
 match .ico nb {
     <img>
        @class = (
-        'nb-icon nb-'
+        'nb-icon _nb-'
         .size
         if .icon  != '' {
             '-'

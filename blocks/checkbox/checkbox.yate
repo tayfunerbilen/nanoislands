@@ -29,11 +29,11 @@ match .checkbox nb {
         @class += " _init"
 
         if .disabled  {
-             @class += ' nb-is-disabled'
+             @class += ' _nb-is-disabled'
         }
 
 
-        <input class="nb-checkbox-input" id="nb-checkbox_{ uniq }">
+        <input class="_nb-checkbox-input" id="nb-checkbox_{ uniq }">
             if .type == 'button' {
                 @type = 'checkbox'
             } else {
@@ -71,20 +71,20 @@ match .checkbox nb {
                 'id': false()
                 'attrs': false()
                 'class': [
-                    'nb-checkbox-label'
+                    '_nb-checkbox-label'
                 ]
             }))
         } else {
-            <span class="nb-checkbox-flag ">
+            <span class="_nb-checkbox-flag ">
                  if .type == 'checkbox' {
-                    @class += 'nb-checkbox-normal-flag'
+                    @class += '_nb-checkbox-normal-flag'
                 } else if .type {
-                    @class += 'nb-checkbox-{.type}-flag'
+                    @class += '_nb-checkbox-{.type}-flag'
                 }
-                <span class="nb-checkbox-flag-icon"></span>
+                <span class="_nb-checkbox-flag-icon"></span>
             </span>
 
-            <span class="nb-checkbox-label">
+            <span class="_nb-checkbox-label">
                 if (.content) {
                     html(.content)
                 }

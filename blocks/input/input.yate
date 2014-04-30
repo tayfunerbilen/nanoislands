@@ -31,8 +31,6 @@ match .input nb {
            'type': 'complex'
         })
 
-        @class +=' _init'
-
         apply . nb-main-attrs
 
         if .hint || .error || .ghost {
@@ -44,12 +42,12 @@ match .input nb {
         }
 
         if .disabled {
-            @class += ' nb-is-disabled'
+            @class += ' _nb-is-disabled'
             @data-nb-disabled = 'true'
         }
 
         if .ghost {
-            @class += ' is-ghost'
+            @class += ' _nb-is-ghost'
             @data-nb-ghost = 'true'
         }
 
@@ -58,11 +56,11 @@ match .input nb {
         }
 
         if .hint && .hint.text != '' {
-            <span class="nb-input-hint">
-                <span class="nb-input-hint-inner">
+            <span class="_nb-input-hint">
+                <span class="_nb-input-hint-inner">
                     if .hint.ghost {
-                        <span class="nb-input-hint-ghost"></span>
-                        <span class="nb-input-hint-content">
+                        <span class="_nb-input-hint-ghost"></span>
+                        <span class="_nb-input-hint-content">
                             .hint.text
                         </span>
                     } else {
@@ -74,30 +72,30 @@ match .input nb {
 
         if .error {
            nb-popup({
-                "class": "nb-error-popup"
+                "class": "_nb-error-popup"
                 "content": .error.content
                 "id": errorId
            })
         }
 
         if .reset {
-            <span class="nb-input-reset"></span>
+            <span class="_nb-input-reset"></span>
         }
 
         if .leftContent {
-            <span class="nb-input-left">
+            <span class="_nb-input-left">
                 html(.leftContent)
             </span>
         }
 
         if .rightContent {
-            <span class="nb-input-right">
+            <span class="_nb-input-right">
                 html(.rightContent)
             </span>
         }
 
-        <span class="nb-input-content">
-            <input class="nb-input-controller" value="{.content}">
+        <span class="_nb-input-content">
+            <input class="_nb-input-controller" value="{.content}">
                 for .attrs.* {
                     @{name()} = .
                 }
@@ -110,7 +108,7 @@ match .input nb {
                     @disabled = 'disabled'
                 }
             </input>
-            <span class="nb-input-view">&nbsp;</span>
+            <span class="_nb-input-view">&nbsp;</span>
         </span>
     </label>
 }
@@ -137,12 +135,12 @@ match .textarea nb {
         }
 
         if .disabled {
-            @class += ' nb-is-disabled'
+            @class += ' _nb-is-disabled'
             @data-nb-disabled = 'true'
         }
 
         if .ghost {
-            @class += ' is-ghost _init'
+            @class += ' _nb-is-ghost _init'
             @data-nb-ghost = 'true'
         }
 
@@ -151,30 +149,30 @@ match .textarea nb {
            @data-nb-error ='{{ "id": "{ errorId }", "direction":"{ .error.direction}" }}'
 
            nb-popup({
-                "class": "nb-error-popup"
+                "class": "_nb-error-popup"
                 "content": .error.content
                 "id": errorId
            })
         }
 
         if .reset {
-            <span class="nb-input-reset"></span>
+            <span class="_nb-input-reset"></span>
         }
 
         if .leftContent {
-            <span class="nb-input-left">
+            <span class="_nb-input-left">
                 html(.leftContent)
             </span>
         }
 
         if .rightContent {
-            <span class="nb-input-right">
+            <span class="_nb-input-right">
                 html(.rightContent)
             </span>
         }
 
-        <span class="nb-input-content">
-            <textarea class="nb-input-controller">
+        <span class="_nb-input-content">
+            <textarea class="_nb-input-controller">
                 for .attrs.* {
                     @{name()} = .
                 }
@@ -191,7 +189,7 @@ match .textarea nb {
                     html(.content)
                 }
             </textarea>
-            <span class="nb-input-view">&nbsp;</span>
+            <span class="_nb-input-view">&nbsp;</span>
         </span>
     </label>
 }
@@ -218,7 +216,7 @@ match .inputSimple nb {
         }
 
         if .disabled {
-            @class += ' nb-is-disabled'
+            @class += ' _nb-is-disabled'
             @disabled = 'disabled'
             @data-nb-disabled = 'true'
         }
@@ -247,7 +245,7 @@ match .textareaSimple nb {
         }
 
         if .disabled {
-            @class += ' nb-is-disabled'
+            @class += ' _nb-is-disabled'
             @disabled = 'disabled'
             @data-nb-disabled = 'true'
         }

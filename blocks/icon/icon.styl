@@ -5,11 +5,11 @@ $svg ?= {}
 
   // Move this to a skin?
   .nb-button &
-  .nb-select-text &
+  ._nb-select-text &
     margin-right: $islands_xs
     margin-left: -1*$islands_xs
 
-  .nb-with-only-button &
+  ._nb-with-only-button &
     margin-right: -1*$islands_xs
     margin-left: -1*$islands_xs
 
@@ -23,12 +23,12 @@ $svg["sizes"] = {
 
 for $size-name, $size-value in $svg.sizes
   for $icon in $svg-icons
-    .nb-{$size-name}-{$icon}-icon
+    ._nb-{$size-name}-{$icon}-icon
       background-image: url($icon + '.svg')
       width:  $size-value
       height:  $size-value
 
 
 // Compensate visual shift for link icon
-.nb-icon-link
+._nb-icon-link
   left: 2px

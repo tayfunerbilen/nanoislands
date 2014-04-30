@@ -40,7 +40,7 @@ func _size-theme-type-class(nodeset options) {
 
         // Set the size and theme modifier
         if (!options.size || options.size == 'm' ) && ( !options.theme || options.theme == 'normal' ) && !options.type {
-            @class += ' nb-normal-{ options.name }'
+            @class += ' _nb-normal-{ options.name }'
         } else {
             size = (if options.size == 's' {
                 '-small'
@@ -58,7 +58,7 @@ func _size-theme-type-class(nodeset options) {
                 '-' +  options.type
             })
 
-            @class += ' nb{ size }{ theme }{ type }-{ options.name }'
+            @class += ' _nb{ size }{ theme }{ type }-{ options.name }'
         }
 }
 
