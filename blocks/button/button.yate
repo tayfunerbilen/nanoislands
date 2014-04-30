@@ -5,15 +5,15 @@ func nb-button(nodeset options) {
     }
 
     if options.type == 'file' {
-        nb-block('buttonAttach', nb-extend(default, options))
+        _nb-block('buttonAttach', _nb-extend(default, options))
     } else if options.type == 'inline' {
-        nb-block('buttonSpan', nb-extend(default, options))
+        _nb-block('buttonSpan', _nb-extend(default, options))
     } else if options.type == 'label' {
-        nb-block('buttonLabel', nb-extend(default, options))
+        _nb-block('buttonLabel', _nb-extend(default, options))
     } else if options.type == 'link' {
-        nb-block('buttonLink', nb-extend(default, options))
+        _nb-block('buttonLink', _nb-extend(default, options))
     }  else {
-        nb-block('button', nb-extend(default, options))
+        _nb-block('button', _nb-extend(default, options))
     }
 }
 

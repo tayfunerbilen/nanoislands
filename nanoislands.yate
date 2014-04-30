@@ -1,8 +1,8 @@
-external nodeset nb-extend(nodeset, nodeset)
-external nodeset nb-deep-extend(nodeset, nodeset)
-external nodeset nb-wrap(scalar, nodeset)
-external scalar nb-warn(scalar)
-external scalar nb-uniq()
+external nodeset _nb-extend(nodeset, nodeset)
+external nodeset _nb-deep-extend(nodeset, nodeset)
+external nodeset _nb-wrap(scalar, nodeset)
+external scalar _nb-warn(scalar)
+external scalar _nb-uniq()
 
 /**
  * Escapes nodeset data to xml. So you can safety use it in nb-call

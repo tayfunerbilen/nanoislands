@@ -11,7 +11,7 @@ func nb-dropzone(nodeset options) {
         }
     }
 
-    nb-block('dropzone', nb-deep-extend(default, options))
+    _nb-block('dropzone', _nb-deep-extend(default, options))
 }
 
 

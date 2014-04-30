@@ -10,7 +10,7 @@ func nb-popup-menu(nodeset options) {
        //]
     }
 
-    nb-block('popupMenu', nb-extend(default, options))
+    _nb-block('popupMenu', _nb-extend(default, options))
 }
 
 match .popupMenu nb {
@@ -53,7 +53,7 @@ func nb-popup(nodeset options) {
        'none': 'none'
     }
 
-    nb-block('popup', nb-extend(default, options))
+    _nb-block('popup', _nb-extend(default, options))
 }
 
 match .popup nb {
@@ -90,7 +90,7 @@ func nb-popup-modal(nodeset options) {
         }
     }
 
-    nb-block('modalPopup', nb-deep-extend(default, options))
+    _nb-block('modalPopup', _nb-deep-extend(default, options))
 }
 
 match .modalPopup nb {

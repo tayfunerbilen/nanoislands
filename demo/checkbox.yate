@@ -30,7 +30,7 @@ func checkbox-button() {
     nb-checkbox(button)
     <br />
     <br />
-    nb-checkbox(nb-extend(button, theme1))
+    nb-checkbox(_nb-extend(button, theme1))
 
 }
 

@@ -4,11 +4,11 @@ func nb-icon(nodeset options) {
     }
 
 
-    nb-block('ico', nb-extend(default, options))
-    if!(nb-extend(default, options).icon) {
+    _nb-block('ico', _nb-extend(default, options))
+    if!(_nb-extend(default, options).icon) {
         log('debug')
             log(options)
-            log(nb-extend(default, options))
+            log(_nb-extend(default, options))
     }
 
 }

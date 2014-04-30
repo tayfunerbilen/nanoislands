@@ -4,7 +4,7 @@ func nb-suggest(nodeset options) {
         'type': 'default'
     }
 
-    nb-block('suggest', nb-extend(defaults, options))
+    _nb-block('suggest', _nb-extend(defaults, options))
 }
 
 match .suggest nb {

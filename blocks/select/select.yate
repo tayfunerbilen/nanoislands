@@ -5,7 +5,7 @@ func nb-select(nodeset select) {
         'direction': 'bottom'
     }
 
-    nb-block('select', nb-extend(default, select))
+    _nb-block('select', _nb-extend(default, select))
 }
 
 match .select nb {

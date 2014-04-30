@@ -3,7 +3,7 @@ func nb-island(nodeset options) {
         'content': ''
     }
 
-    nb-block('island', nb-extend(island, options))
+    _nb-block('island', _nb-extend(island, options))
 
 }
 

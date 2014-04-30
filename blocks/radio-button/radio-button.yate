@@ -5,7 +5,7 @@ func nb-radio-button(nodeset options) {
         'type': 'radio'
     }
 
-    nb-block('radio-button', nb-extend(default, options))
+    _nb-block('radio-button', _nb-extend(default, options))
 }
 
 match .radio-button nb {
@@ -21,7 +21,7 @@ match .radio-button nb {
         apply . nb-main-attrs
         for .group {
 
-            uniq = 'nb-radio-button_{nb-uniq()}'
+            uniq = 'nb-radio-button_{_nb-uniq()}'
             <span class="nb-radio-button-button nb-complex-group-item">
                 <input class="nb-radio-button-radio" type="radio" name="{ ..name }" value="{ .value }" id="{ uniq }">
                     if .checked {
@@ -40,7 +40,7 @@ match .radio-button nb {
                     }
                 </input>
 
-                nb-button(nb-extend(., {
+                nb-button(_nb-extend(., {
                     'class': [
                         'nb-complex-group-item-subject'
                         'js-button'

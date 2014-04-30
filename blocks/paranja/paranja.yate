@@ -3,7 +3,7 @@ func nb-paranja(nodeset options) {
         'theme': 'dark'
     }
 
-    nb-block('paranja', nb-extend(default, options))
+    _nb-block('paranja', _nb-extend(default, options))
 }
 
 match .paranja nb {

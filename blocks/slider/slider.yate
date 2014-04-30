@@ -6,7 +6,7 @@ func nb-slider(nodeset options) {
         'orientation': 'horiz'
     }
 
-    nb-block('slider', nb-deep-extend(default, options))
+    _nb-block('slider', _nb-deep-extend(default, options))
 }
 
 match .slider nb {

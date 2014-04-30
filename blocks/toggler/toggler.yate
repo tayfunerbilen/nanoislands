@@ -7,7 +7,7 @@ func nb-toggler(nodeset toggler) {
         //'checked': true()
     }
 
-    nb-block('toggler', nb-extend(default, toggler))
+    _nb-block('toggler', _nb-extend(default, toggler))
 }
 
 match .toggler nb {

@@ -3,7 +3,7 @@ func nb-tabs(nodeset options) {
         'size': 'm'
     }
 
-    nb-block('tabs', nb-extend(default, options))
+    _nb-block('tabs', _nb-extend(default, options))
 }
 
 match .tabs nb {
@@ -19,7 +19,7 @@ match .tabs nb {
 
         apply . nb-main-attrs
 
-        prefix = "tabs-{nb-uniq()}"
+        prefix = "tabs-{_nb-uniq()}"
 
         <ul class="nb-tabs-tabs">
             for .items {

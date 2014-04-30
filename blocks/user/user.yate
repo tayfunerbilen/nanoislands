@@ -3,7 +3,7 @@ func nb-user(nodeset user) {
         'size': 'm'
     }
 
-    nb-block('user', nb-extend(default, user))
+    _nb-block('user', _nb-extend(default, user))
 }
 
 match .user nb {

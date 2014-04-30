@@ -10,7 +10,7 @@ func nb-progress(nodeset options) {
 
     }
 
-    nb-block('progress', nb-extend(default, options))
+    _nb-block('progress', _nb-extend(default, options))
 }
 
 match .progress nb {
