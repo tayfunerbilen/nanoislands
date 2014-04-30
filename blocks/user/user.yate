@@ -8,7 +8,7 @@ func nb-user(nodeset user) {
 
 match .user nb {
 
-    <span data-nb="user">
+    <span>
           _size-theme-type-class({
                 'name': 'user'
                 'size': .size
